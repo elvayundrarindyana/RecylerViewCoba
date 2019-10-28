@@ -13,7 +13,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 
 public class MainActivity extends AppCompatActivity {
     final ArrayList arrayList = new ArrayList();
@@ -69,10 +71,22 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onBindViewHolder(@NonNull RecyclerView.ViewHolder viewHolder, int i) {
-                TextView textView = viewHolder.itemView.findViewById(R.id.txtTittle);
-                textView.setText(String.valueOf(arrayList.get(i)));
+                TextView textView = viewHolder.itemView.findViewById(R.id.txtNama);
+                textView.setText("gatot");
+                TextView message = viewHolder.itemView.findViewById(R.id.txtMessage);
+                message.setText(String.valueOf(arrayList.get(i)));
+                TextView jam = viewHolder.itemView.findViewById(R.id.jam);
 
+                Calendar calendar = Calendar.getInstance();
+                SimpleDateFormat mdformat = new SimpleDateFormat("HH:mm:ss");
+                String strDate = "Current Time : " + mdformat.format(calendar.getTime());
+                jam.setText(strDate);
             }
+
+//                CalendarView calendarView = viewHolder.itemView.findViewById(R.id.calendarView);
+//                calendarView.getDate();
+
+
 
             @Override
             public int getItemCount() {

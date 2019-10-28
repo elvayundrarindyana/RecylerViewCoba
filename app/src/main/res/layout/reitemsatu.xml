@@ -28,7 +28,7 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/txtTittle"
+                    android:id="@+id/txtNama"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="nenek" />
@@ -40,10 +40,11 @@
                     android:text="siapa" />
 
                 <TextView
-                    android:id="@+id/textView3"
+                    android:id="@+id/jam"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="ini" />
+                    android:text="TextView" />
+
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
